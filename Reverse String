@@ -1,20 +1,19 @@
-// C Program to Reverse a String using Recursion
+
 #include <stdio.h>
 #include <string.h>
 
 void reverseStringRecursive(char* str, int start, int end) {
 
-    // Base case
+
     if (start >= end) {
         return;
     }
 
-    // Swap characters
+   
     char temp = str[start];
     str[start] = str[end];
     str[end] = temp;
 
-    // Recursively call the function with updated indices
     reverseStringRecursive(str, start + 1, end - 1);
 }
 
